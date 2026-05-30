@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rostislav Oboňa</title>
+<meta name="description" content="Podcasty, weby a jiné pokusy. Vyberte si co vás zajímá.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f2eb;
+    --text: #1a1814;
+    --muted: #7a7670;
+    --border: #d4cfc4;
+    --card-bg: #faf8f4;
+    --hover-bg: #edeae2;
+    --accent: #2d5a3d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141210;
+      --text: #e8e4db;
+      --muted: #8a8680;
+      --border: #2e2b26;
+      --card-bg: #1c1a17;
+      --hover-bg: #242119;
+      --accent: #5a9e72;
+    }
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+
+  main {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  .name {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .name em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+
+  .divider {
+    width: 2rem;
+    height: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  a.project {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--border);
+    transition: padding-left 0.2s ease;
+    position: relative;
+  }
+
+  a.project:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  a.project:hover {
+    padding-left: 0.75rem;
+  }
+
+  a.project:hover .project-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .project-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .project-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .project-arrow {
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .project-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  .project-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1 class="name">Rostislav <em>Oboňa</em></h1>
+    <p class="tagline">Dělám věci pro uši.<br>Někdy i pro oči.</p>
+  </header>
+
+  <div class="divider"></div>
+
+  <nav class="projects" aria-label="Projekty">
+
+    <a class="project" href="https://www.forendors.cz/radiozeitung" target="_blank" rel="noopener">
+      <span class="project-tag">podcast · placeno</span>
+      <div class="project-top">
+        <span class="project-name">Radio Zeitung</span>
+        <span class="project-arrow">→</span>
+      </div>
+      <p class="project-desc">Denní audioblog Sladký život, historický podcast FofrHistorie a jiné pokusy. Přes sedm set dílů za sebou a stále se nestydím.</p>
+    </a>
+
+    <a class="project" href="https://www.fofrhistorie.cz/" target="_blank" rel="noopener">
+      <span class="project-tag">podcast · zdarma</span>
+      <div class="project-top">
+        <span class="project-name">FofrHistorie</span>
+        <span class="project-arrow">→</span>
+      </div>
+      <p class="project-desc">Co se stalo přesně dnes — ale před desítkami nebo stovkami let. Jedna událost, jeden díl, každý den.</p>
+    </a>
+
+    <a class="project" href="https://www.svobodny-nouzov.cz/" target="_blank" rel="noopener">
+      <span class="project-tag">zpravodajství · satira</span>
+      <div class="project-top">
+        <span class="project-name">Svobodný Nouzov</span>
+        <span class="project-arrow">→</span>
+      </div>
+      <p class="project-desc">Zpravodajský server nejlepší vesnice v okrese. Vše důležité, co jinde nenajdete — protože to nikde jinde není.</p>
+    </a>
+
+    <a class="project" href="https://www.povinnacetba.cz/" target="_blank" rel="noopener">
+      <span class="project-tag">vzdělávání</span>
+      <div class="project-top">
+        <span class="project-name">Povinná četba</span>
+        <span class="project-arrow">→</span>
+      </div>
+      <p class="project-desc">Taháky z češtiny pro maturanty. Stručně, srozumitelně, bez zbytečného.</p>
+    </a>
+
+  </nav>
+
+  <footer>
+    <p>obona.cz</p>
+  </footer>
+</main>
+</body>
+</html>
