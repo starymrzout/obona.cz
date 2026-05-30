@@ -75,10 +75,21 @@
     text-decoration: underline;
   }
 
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .project-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
   .project-name {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 0.3rem;
   }
 
   .project-desc {
@@ -138,22 +149,34 @@
   <nav aria-label="Projekty">
 
     <a class="project" href="https://www.forendors.cz/radiozeitung" target="_blank" rel="noopener">
-      <div class="project-name">Radio Zeitung</div>
+      <div class="project-header">
+        <span class="project-icon">🎙️</span>
+        <span class="project-name">Radio Zeitung</span>
+      </div>
       <p class="project-desc">Denní audioblog Sladký život, historický pořad FofrHistorie a jiné pokusy.</p>
     </a>
 
     <a class="project" href="https://www.fofrhistorie.cz/" target="_blank" rel="noopener">
-      <div class="project-name">FofrHistorie</div>
+      <div class="project-header">
+        <span class="project-icon">🏛️</span>
+        <span class="project-name">FofrHistorie</span>
+      </div>
       <p class="project-desc">Co se stalo přesně dnes — ale před desítkami nebo stovkami let. Jedna událost, jeden díl, každý den.</p>
     </a>
 
     <a class="project" href="https://www.svobodny-nouzov.cz/" target="_blank" rel="noopener">
-      <div class="project-name">Svobodný Nouzov</div>
+      <div class="project-header">
+        <span class="project-icon">🏠</span>
+        <span class="project-name">Svobodný Nouzov</span>
+      </div>
       <p class="project-desc">Zpravodajský server nejlepší vesnice v okrese.</p>
     </a>
 
     <a class="project" href="https://www.povinnacetba.cz/" target="_blank" rel="noopener">
-      <div class="project-name">Povinná četba</div>
+      <div class="project-header">
+        <span class="project-icon">📚</span>
+        <span class="project-name">Povinná četba</span>
+      </div>
       <p class="project-desc">Taháky z češtiny pro maturanty. Stručně a k věci.</p>
     </a>
 
