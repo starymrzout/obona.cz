@@ -86,8 +86,25 @@
     line-height: 1.55;
   }
 
-  footer {
+  .social {
     margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .social a {
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .social a:hover {
+    text-decoration: underline;
+    color: var(--text);
+  }
+
+  footer {
+    margin-top: 2rem;
     font-size: 0.8rem;
     color: var(--muted);
   }
@@ -96,13 +113,13 @@
 <body>
 <main>
   <h1>Rostislav Oboňa</h1>
-  <p class="tagline">Dělám věci pro uši. Někdy i pro oči.</p>
+  <p class="tagline">Dělám věci.</p>
 
   <nav aria-label="Projekty">
 
     <a class="project" href="https://www.forendors.cz/radiozeitung" target="_blank" rel="noopener">
       <div class="project-name">Radio Zeitung</div>
-      <p class="project-desc">Denní audioblog Sladký život, historický pořad FofrHistorie a jiné pokusy. Přes sedm set dílů za sebou.</p>
+      <p class="project-desc">Denní audioblog Sladký život, historický pořad FofrHistorie a jiné pokusy.</p>
     </a>
 
     <a class="project" href="https://www.fofrhistorie.cz/" target="_blank" rel="noopener">
@@ -121,6 +138,11 @@
     </a>
 
   </nav>
+
+  <div class="social">
+    <a href="https://bsky.app/profile/starymrzout.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+    <a href="https://www.facebook.com/profile.php?id=61576807372403" target="_blank" rel="noopener">Facebook</a>
+  </div>
 
   <footer>obona.cz</footer>
 </main>
