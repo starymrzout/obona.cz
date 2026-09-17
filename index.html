@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rostislav Oboňa — dělám věci</title>
-<meta name="description" content="Radio Zeitung, podcasty, weby a jiné pokusy Rostislava Oboni.">
+<meta name="description" content="Radio Zeitung, weby a jiné pokusy Rostislava Oboni.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23111'/><text x='16' y='22' font-family='sans-serif' font-size='16' font-weight='600' fill='white' text-anchor='middle'>RO</text></svg>">
 
@@ -36,10 +36,6 @@
       --border: #333333;
       --soft: #1a1a1a;
     }
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 
   body {
@@ -179,41 +175,26 @@
     line-height: 1.5;
   }
 
-  .contact-label {
+  .contact {
     margin-top: 2.7rem;
-    margin-bottom: 0.75rem;
+  }
+
+  .contact-label {
+    margin-bottom: 0.5rem;
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
   }
 
-  .social {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-  }
-
-  .social a {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-size: 0.9rem;
+  .email {
     color: var(--text);
     text-decoration: none;
-    padding: 0.5rem 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    font-size: 0.95rem;
   }
 
-  .social a:hover {
-    background: var(--border);
-  }
-
-  .social svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
+  .email:hover {
+    text-decoration: underline;
   }
 
   footer {
@@ -239,10 +220,12 @@
 
 <body>
 <main>
+
   <h1>Rostislav Oboňa</h1>
   <p class="tagline">Dělám věci.</p>
 
   <section class="radio" aria-label="Radio Zeitung">
+
     <div class="radio-top">
       <div class="radio-name">🎙️ Radio Zeitung</div>
       <div class="radio-badge">24/7 zdarma</div>
@@ -254,72 +237,86 @@
     </p>
 
     <div class="radio-links">
-      <a class="button" href="https://www.zeitung.cz/p/play.html" target="_blank" rel="noopener">
+
+      <a class="button"
+         href="https://www.zeitung.cz/p/play.html"
+         target="_blank"
+         rel="noopener">
         ▶ Poslouchat rádio
       </a>
 
-      <a class="button" href="https://www.forendors.cz/radiozeitung" target="_blank" rel="noopener">
-        Archiv / Forendors
+      <a class="button"
+         href="https://www.forendors.cz/radiozeitung"
+         target="_blank"
+         rel="noopener">
+        Podpořit / celý archiv
       </a>
+
     </div>
+
   </section>
 
   <nav aria-label="Projekty">
 
-    <a class="project" href="https://www.fofrhistorie.cz/" target="_blank" rel="noopener">
-      <div class="project-header">
-        <span class="project-icon">🏛️</span>
-        <span class="project-name">FofrHistorie</span>
-      </div>
-      <p class="project-desc">
-        Co se stalo přesně dnes — ale před desítkami nebo stovkami let.
-        Jedna událost, jeden díl.
-      </p>
-    </a>
+    <a class="project"
+       href="https://www.svobodny-nouzov.cz/"
+       target="_blank"
+       rel="noopener">
 
-    <a class="project" href="https://www.svobodny-nouzov.cz/" target="_blank" rel="noopener">
       <div class="project-header">
         <span class="project-icon">🏠</span>
         <span class="project-name">Svobodný Nouzov</span>
       </div>
+
       <p class="project-desc">
         Zpravodajský server nejlepší vesnice v okrese.
       </p>
+
     </a>
 
-    <a class="project" href="https://www.povinnacetba.cz/" target="_blank" rel="noopener">
+    <a class="project"
+       href="https://www.opavskatrouba.cz/"
+       target="_blank"
+       rel="noopener">
+
+      <div class="project-header">
+        <span class="project-icon">📯</span>
+        <span class="project-name">Opavská trouba</span>
+      </div>
+
+      <p class="project-desc">
+        Zprávy z Opavy a okolí, které se mohly stát. A některé se dokonce staly.
+      </p>
+
+    </a>
+
+    <a class="project"
+       href="https://www.povinnacetba.cz/"
+       target="_blank"
+       rel="noopener">
+
       <div class="project-header">
         <span class="project-icon">📚</span>
         <span class="project-name">Povinná četba</span>
       </div>
+
       <p class="project-desc">
         Taháky z češtiny pro maturanty. Stručně a k věci.
       </p>
+
     </a>
 
   </nav>
 
-  <p class="contact-label">Kontakt</p>
-
-  <div class="social">
-
-    <a href="mailto:rostislav.obona@gmail.com" aria-label="E-mail">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
-      </svg>
-      E-mail
+  <section class="contact">
+    <p class="contact-label">Kontakt</p>
+    <a class="email" href="mailto:rostislav.obona@gmail.com">
+      rostislav.obona@gmail.com
     </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61576807372403" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z"/>
-      </svg>
-      Facebook
-    </a>
-
-  </div>
+  </section>
 
   <footer>obona.cz</footer>
+
 </main>
 </body>
 </html>
