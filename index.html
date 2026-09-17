@@ -46,14 +46,14 @@
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   main {
     width: 100%;
     max-width: 560px;
+    text-align: center;
   }
 
   h1 {
@@ -67,51 +67,47 @@
   .tagline {
     font-size: 1rem;
     color: var(--muted);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.8rem;
   }
 
   .radio {
-    padding: 1.4rem;
-    margin-bottom: 1.2rem;
+    padding: 1.6rem 1.4rem;
+    margin-bottom: 1.4rem;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--soft);
-  }
-
-  .radio-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.45rem;
   }
 
   .radio-name {
     font-size: 1.35rem;
     font-weight: 600;
     line-height: 1.2;
+    margin-bottom: 0.25rem;
   }
 
   .radio-badge {
-    flex-shrink: 0;
-    font-size: 0.72rem;
+    display: inline-block;
+    font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 0.2rem 0.55rem;
+    padding: 0.15rem 0.55rem;
+    margin-bottom: 0.8rem;
   }
 
   .radio-desc {
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.55;
-    margin-bottom: 1rem;
+    max-width: 430px;
+    margin: 0 auto 1.1rem;
   }
 
   .radio-links {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0.65rem;
   }
@@ -133,18 +129,14 @@
   }
 
   nav {
-    margin-top: 0.5rem;
+    border-top: 1px solid var(--border);
   }
 
   a.project {
     display: block;
     text-decoration: none;
     color: inherit;
-    padding: 1.3rem 0;
-    border-top: 1px solid var(--border);
-  }
-
-  a.project:last-child {
+    padding: 1.45rem 1rem;
     border-bottom: 1px solid var(--border);
   }
 
@@ -152,35 +144,31 @@
     text-decoration: underline;
   }
 
-  .project-header {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.25rem;
+  .project-name {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
   }
 
   .project-icon {
-    font-size: 1.15rem;
-    line-height: 1;
-  }
-
-  .project-name {
-    font-size: 1.15rem;
-    font-weight: 600;
+    margin-right: 0.25rem;
   }
 
   .project-desc {
     font-size: 0.93rem;
     color: var(--muted);
     line-height: 1.5;
+    max-width: 440px;
+    margin: 0 auto;
   }
 
   .contact {
-    margin-top: 2.7rem;
+    margin-top: 2.8rem;
   }
 
   .contact-label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.45rem;
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -189,25 +177,21 @@
 
   .email-address {
     font-size: 0.95rem;
-    color: var(--text);
   }
 
   footer {
-    margin-top: 2.3rem;
+    margin-top: 2.5rem;
     font-size: 0.78rem;
     color: var(--muted);
   }
 
   @media (max-width: 480px) {
     body {
-      align-items: flex-start;
-      padding-top: 2.2rem;
+      padding: 2.5rem 1.2rem;
     }
 
-    .radio-top {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 0.55rem;
+    .radio {
+      padding: 1.4rem 1rem;
     }
   }
 </style>
@@ -221,10 +205,8 @@
 
   <section class="radio" aria-label="Radio Zeitung">
 
-    <div class="radio-top">
-      <div class="radio-name">🎙️ Radio Zeitung</div>
-      <div class="radio-badge">24/7 zdarma</div>
-    </div>
+    <div class="radio-name">🎙️ Radio Zeitung</div>
+    <div class="radio-badge">24/7 zdarma</div>
 
     <p class="radio-desc">
       Internetové rádio, podcasty, historie, skeče a další pokusy.
@@ -258,10 +240,10 @@
        target="_blank"
        rel="noopener">
 
-      <div class="project-header">
+      <span class="project-name">
         <span class="project-icon">🏠</span>
-        <span class="project-name">Svobodný Nouzov</span>
-      </div>
+        Svobodný Nouzov
+      </span>
 
       <p class="project-desc">
         Zpravodajský server nejlepší vesnice v okrese.
@@ -274,10 +256,10 @@
        target="_blank"
        rel="noopener">
 
-      <div class="project-header">
+      <span class="project-name">
         <span class="project-icon">📯</span>
-        <span class="project-name">Opavská trouba</span>
-      </div>
+        Opavská trouba
+      </span>
 
       <p class="project-desc">
         Zprávy z Opavy a okolí, které se mohly stát. A některé se dokonce staly.
@@ -290,10 +272,10 @@
        target="_blank"
        rel="noopener">
 
-      <div class="project-header">
+      <span class="project-name">
         <span class="project-icon">📚</span>
-        <span class="project-name">Povinná četba</span>
-      </div>
+        Povinná četba
+      </span>
 
       <p class="project-desc">
         Taháky z češtiny pro maturanty. Stručně a k věci.
